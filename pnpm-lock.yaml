@@ -40,7 +40,7 @@ importers:
         specifier: ^4.1.7
         version: 4.1.7
       esbuild:
-        specifier: ^0.25.0
+        specifier: '>=0.25.0'
         version: 0.25.0
       eslint:
         specifier: ^9.20.1
