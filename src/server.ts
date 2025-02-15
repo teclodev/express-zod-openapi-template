@@ -1,5 +1,5 @@
-import "dotenv/config";
-import "zod-openapi/extend";
-import { app } from "./app";
+import "dotenv/config"
+import "zod-openapi/extend"
+import { app } from "./app"
 
-app.listen(3000, () => console.log("Server running on http://localhost:3000"));
+app.listen(3000, () => console.log("Server running on http://localhost:3000"))

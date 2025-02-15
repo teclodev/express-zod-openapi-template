@@ -1,5 +1,5 @@
 export class Client {
   value() {
-    return "hello from client";
+    return "hello from client"
   }
 }

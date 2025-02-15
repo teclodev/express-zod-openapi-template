@@ -1,5 +1,5 @@
 export class Database {
   value() {
-    return "hello from database";
+    return "hello from database"
   }
 }

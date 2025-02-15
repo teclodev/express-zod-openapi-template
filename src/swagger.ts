@@ -1,12 +1,12 @@
-import { createDocument, ZodOpenApiOperationObject } from "zod-openapi";
-import { OpenAPIObject } from "zod-openapi/dist/openapi3-ts/dist/model/openapi31";
+import { createDocument, ZodOpenApiOperationObject } from "zod-openapi"
+import { OpenAPIObject } from "zod-openapi/dist/openapi3-ts/dist/model/openapi31"
 
-export type OpenApiPathEntry = Record<string, ZodOpenApiOperationObject>;
+export type OpenApiPathEntry = Record<string, ZodOpenApiOperationObject>
 
-const openApiPaths: Record<string, OpenApiPathEntry> = {};
+const openApiPaths: Record<string, OpenApiPathEntry> = {}
 
 export function addOpenApiPath(key: string, value: OpenApiPathEntry) {
-  openApiPaths[key] = value;
+  openApiPaths[key] = value
 }
 
 export function getOpenAPISpec(): OpenAPIObject {
@@ -14,8 +14,8 @@ export function getOpenAPISpec(): OpenAPIObject {
     openapi: "3.0.0",
     info: {
       title: "API",
-      version: "1.0.0",
+      version: "1.0.0"
     },
-    paths: openApiPaths,
-  });
+    paths: openApiPaths
+  })
 }

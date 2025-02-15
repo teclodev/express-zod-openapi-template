@@ -1,31 +1,31 @@
-import { DomainModuleWithDeps } from "../di";
-import { PostRepository } from "../data/repositories/PostRepository";
-import { Pagination } from "../data/models/Pagination";
-import { PostModel } from "../data/models/Post";
+import { DomainModuleWithDeps } from "../di"
+import { PostRepository } from "../data/repositories/PostRepository"
+import { Pagination } from "../data/models/Pagination"
+import { PostModel } from "../data/models/Post"
 
 export class GetPosts {
-  private readonly postRepository: PostRepository;
+  private readonly postRepository: PostRepository
 
   constructor(opts: DomainModuleWithDeps) {
-    this.postRepository = opts.postRepository;
+    this.postRepository = opts.postRepository
   }
 
   async execute(params: Params): Promise<Result> {
     const posts = await this.postRepository.getPosts({
       page: params.pagination.page,
-      pageSize: params.pagination.pageSize,
-    });
+      pageSize: params.pagination.pageSize
+    })
 
     return {
-      posts,
-    };
+      posts
+    }
   }
 }
 
 type Params = {
-  pagination: Pagination;
-};
+  pagination: Pagination
+}
 
 type Result = {
-  posts: PostModel[];
-};
+  posts: PostModel[]
+}

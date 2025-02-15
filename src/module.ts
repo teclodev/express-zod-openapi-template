@@ -1,18 +1,18 @@
-import { asClass } from "awilix";
-import { NameAndRegistrationPair } from "awilix/lib/container";
+import { asClass } from "awilix"
+import { NameAndRegistrationPair } from "awilix/lib/container"
 
 export class Logger {
   log(message: string) {
-    console.log(message);
+    console.log(message)
   }
 }
 
 export interface AppModule {
-  logger: Logger;
+  logger: Logger
 }
 
 export function getAppModule(): NameAndRegistrationPair<AppModule> {
   return {
-    logger: asClass(Logger).singleton(),
-  };
+    logger: asClass(Logger).singleton()
+  }
 }
